@@ -29,7 +29,7 @@
                     <td>ranu</td>
                     <td>patidar</td>
                     <td>
-                        <button class="btn btn-success "onclick=" ranu() ">view</button>        
+                        <button class="btn btn-success "onclick=" ranu(this) ">view</button>        
                         <button class="btn btn-primary">edit</button>        
                         <button class="btn btn-danger">delet</button>        
                     </td>
@@ -49,7 +49,7 @@
                     <td>krishti</td>
                     <td>patidar</td>
                     <td>
-                        <button class="btn btn-success">view</button>        
+                        <button class="btn btn-success"onclick=" ranu(this) ">view</button>        
                         <button class="btn btn-primary">edit</button>        
                         <button class="btn btn-danger">delet</button>       
                     </td>
@@ -59,7 +59,7 @@
                     <td>tannu</td>
                     <td>patidar</td>
                     <td>
-                        <button class="btn btn-success">view</button>        
+                        <button class="btn btn-success"onclick=" ranu(this) ">view</button>        
                         <button class="btn btn-primary">edit</button>        
                         <button class="btn btn-danger">delet</button>       
                     </td>
@@ -68,8 +68,9 @@
         </table>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> 
         <script>
-            let ranu = ()=>{
-                console.log('hi')            
+            let ranu = (e)=>{
+                console.log(e.closest('tr').querySelector('td:nth-child(2)').innerHTML);               
+                // console.log('hi')            
             }
             //element.addEventListener(event,function,usecapture);
             // element = document.quryselector(selector)
